@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganando | Pensá como ganador, vestí como ganador</title>
+    <meta name="description" content="Ganando: Ropa casual y deportiva para hombres y mujeres. Calidad, estilo y actitud. Envíos en Posadas y Misiones.">
+    <meta name="keywords" content="ropa posadas, remeras, chombas, buzos jogging, moda masculina y femenina misiones, ropa talle grande posadas">
+    <meta name="author" content="Estilo Online Posadas">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Estilo Online Posadas | Ropa de Calidad">
+    <meta property="og:description" content="Descubrí nuestra colección de ropa casual y deportiva para él y ella. Sin logos caros, solo buen gusto.">
+    <meta property="og:image" content="img/Banner Pareja.jpg">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header class="header">
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <img src="img/logo.jpeg" alt="Logo Ganando" class="logo-img">
+            <span class="logo-text">Ganando</span>
+        </a>
+        <div class="header-actions">
+            <button class="cart-btn" id="cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <nav class="nav-menu" id="nav-menu">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <section id="inicio" class="hero-banner">
+    <img src="img/banner.png" alt="Ganando - Ropa con actitud" class="hero-img">
+    <div class="hero-overlay">
+        <h1>Pensá como ganador, vestí como ganador</h1>
+    </div>
+    </section>
+
+    <!-- Catálogo con Filtros y Buscador -->
+    <section id="catalogo" class="products section-padding">
+        <div class="container">
+            <h2 class="section-title">Lo que se viene</h2>
+            
+            <!-- Barra de búsqueda y filtros -->
+            <div class="catalog-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="hombre">Hombre</button>
+                    <button class="filter-btn" data-filter="mujer">Mujer</button>
+                </div>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div class="product-grid" id="product-container">
+                <!-- Los productos se cargan aquí automáticamente con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Producto -->
+    <div class="product-modal" id="product-modal">
+        <div class="product-modal-content">
+            <div class="product-modal-header">
+                <h3 id="modal-title"></h3>
+                <button class="close-product-modal" id="close-product-modal">&times;</button>
+            </div>
+            <div class="product-modal-body">
+                <p class="product-modal-desc" id="modal-desc"></p>
+                <div class="items-list-modal" id="modal-items">
+                    <!-- Items se cargan dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Carrito Flotante -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h3>Tu Consulta</h3>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items del carrito -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-breakdown">
+                <div class="breakdown-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0</span>
+                </div>
+                <div class="breakdown-row">
+                    <span>Envío:</span>
+                    <span id="cart-shipping">$0</span>
+                </div>
+                <div class="breakdown-row cart-total-row">
+                    <span>Total estimado:</span>
+                    <span id="cart-total">$0</span>
+                </div>
+            </div>
+            <div class="shipping-info" id="shipping-msg">
+                <p><i class="fas fa-truck"></i> Envío: $3.000 | <strong>Gratis</strong> en Posadas y Garupá por compras superiores a $60.000</p>
+            </div>
+            <button class="btn-whatsapp-cart" id="send-whatsapp">
+                <i class="fab fa-whatsapp"></i> Consultar Disponibilidad
+            </button>
+        </div>
+    </div>
+
+    <footer id="contacto">
+    <div class="container footer-content">
+        <div class="footer-col">
+            <h3>Ganando</h3>
+            <p>Pensá como ganador, vestí como ganador.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:info@grupomisiones.com" style="color: inherit; text-decoration: none;">info@grupomisiones.com</a></p>
+            <p><i class="fab fa-whatsapp"></i> +54 9 376 436 4659</p>
+            <p><i class="fas fa-map-marker-alt"></i> Posadas, Misiones</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2026 Ganando. Todos los derechos reservados.</p>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
