@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
     id: 1,
     title: "Look Clásico Completo",
-    desc: "Elegancia cotidiana con chomba de algodón premium, jean de corte moderno y cinto de cuero. El conjunto perfecto para el día a día con estilo.",
+    desc: "Elegancia cotidiana con chomba de algodón premium y jean de corte moderno. El conjunto perfecto para el día a día con estilo.",
     img: "img/chomba y jean.png",
     category: "elegante",
     gender: "hombre",
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { size: "XL", colorName: "Azul/Blanco", colorGradient: ["#000080", "#FFFFFF"] },
                 { size: "XL", colorName: "Gris/Fuccia", colorGradient: ["#808080", "#FF00FF"] },
                 { size: "XL", colorName: "Rojo", colorHex: "#FF0000" },
-                // NUEVAS VARIANTES XXL AGREGADAS:
                 { size: "XXL", colorName: "Pastel", colorHex: "#FADADD" },
                 { size: "XXL", colorName: "Gris/Rojo", colorGradient: ["#808080", "#FF0000"] },
                 { size: "XXL", colorName: "Azul", colorHex: "#000080" },
@@ -38,8 +37,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 { size: "54", colorName: "Celeste", colorHex: "#87CEEB" },
                 { size: "52", colorName: "Azul", colorHex: "#000080" }
             ]
+        }
+    }
+},
+        {
+    id: 13,
+    title: "Estilo Mao",
+    desc: "Sofisticación minimalista. Camisa mao de corte impecable combinada con un cinto de cuero negro esencial.",
+    img: "img/camisa mao.jpg", 
+    category: "sofisticado",
+    gender: "hombre",
+    items: {
+        "Camisa Mao": {
+            price: 25000,
+            variants: [
+                { size: "L", colorName: "Azul Marino", colorHex: "#000080" },
+                { size: "L", colorName: "Negro", colorHex: "#000000" }
+            ]
         },
-        "Cinto": {
+        "Cinto Negro": {
             price: 10000,
             variants: [
                 { size: "Único", colorName: "Negro", colorHex: "#000000" }

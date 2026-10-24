@@ -8,6 +8,7 @@
     
     /* Nuevos colores para etiquetas */
     --border-elegante: #2c3e50;
+    --border-sofisticado: #4a5568; 
     --border-fresco: #16a085;
     --border-tropical: #e67e22;
     --border-training: #e74c3c;
@@ -239,8 +240,8 @@ ul { list-style: none; }
     z-index: 10;
 }
 
-/* Colores de borde para cada etiqueta */
 .tag-elegante { border-left-color: var(--border-elegante); color: var(--border-elegante); }
+.tag-sofisticado { border-left-color: var(--border-sofisticado); color: var(--border-sofisticado); }
 .tag-fresco { border-left-color: var(--border-fresco); color: var(--border-fresco); }
 .tag-tropical { border-left-color: var(--border-tropical); color: var(--border-tropical); }
 .tag-training { border-left-color: var(--border-training); color: var(--border-training); }
