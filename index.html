@@ -12,13 +12,12 @@
     <meta property="og:description" content="Descubrí nuestra colección de ropa casual y deportiva para él y ella.">
     <meta property="og:image" content="img/logo.jpeg">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=5">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navegación -->
     <header class="header">
     <div class="container nav-container">
         <a href="#" class="logo">
@@ -38,6 +37,7 @@
     <nav class="nav-menu" id="nav-menu">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#ofertas">Ofertas</a></li>
             <li><a href="#catalogo">Catálogo</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -51,12 +51,17 @@
     </div>
     </section>
 
-    <!-- Catálogo con Filtros y Buscador -->
+    <section id="ofertas" class="offers section-padding">
+        <div class="container">
+            <h2 class="section-title">🔥 Ofertas Especiales</h2>
+            <div class="offers-grid" id="offers-container"></div>
+        </div>
+    </section>
+
     <section id="catalogo" class="products section-padding">
         <div class="container">
             <h2 class="section-title">Lo que se viene</h2>
             
-            <!-- Barra de búsqueda y filtros -->
             <div class="catalog-controls">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
@@ -69,14 +74,10 @@
                 </div>
             </div>
 
-            <!-- Grid de Productos -->
-            <div class="product-grid" id="product-container">
-                <!-- Los productos se cargan aquí automáticamente con JS -->
-            </div>
+            <div class="product-grid" id="product-container"></div>
         </div>
     </section>
 
-    <!-- Modal de Producto -->
     <div class="product-modal" id="product-modal">
         <div class="product-modal-content">
             <div class="product-modal-header">
@@ -85,22 +86,31 @@
             </div>
             <div class="product-modal-body">
                 <p class="product-modal-desc" id="modal-desc"></p>
-                <div class="items-list-modal" id="modal-items">
-                    <!-- Items se cargan dinámicamente -->
-                </div>
+                <div class="items-list-modal" id="modal-items"></div>
             </div>
         </div>
     </div>
 
-        <!-- Carrito Flotante -->
+    <div class="product-modal" id="combo-modal">
+        <div class="product-modal-content">
+            <div class="product-modal-header">
+                <h3 id="combo-modal-title"></h3>
+                <button class="close-combo-modal" id="close-combo-modal">&times;</button>
+            </div>
+            <div class="product-modal-body">
+                <p class="product-modal-desc" id="combo-modal-desc"></p>
+                <div id="combo-items-area"></div>
+                <div id="combo-summary-area"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="cart-modal" id="cart-modal">
         <div class="cart-header">
             <h3>Tu Consulta</h3>
             <button class="close-cart" id="close-cart">&times;</button>
         </div>
-        <div class="cart-items" id="cart-items">
-            <!-- Items del carrito -->
-        </div>
+        <div class="cart-items" id="cart-items"></div>
         <div class="cart-footer">
             <div class="cart-breakdown">
                 <div class="breakdown-row">

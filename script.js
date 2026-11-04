@@ -2,73 +2,73 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const models = [
         {
-    id: 1,
-    title: "Look Clásico Completo",
-    desc: "Elegancia cotidiana con chomba de algodón premium y jean de corte moderno. El conjunto perfecto para el día a día con estilo.",
-    img: "img/chomba y jean.png",
-    category: "elegante",
-    gender: "hombre",
-    items: {
-        "Chomba": {
-            price: 25000,
-            variants: [
-                { size: "M", colorName: "Rosa", colorHex: "#D2A1B6" },
-                { size: "L", colorName: "Celeste", colorHex: "#99D1DC" },
-                { size: "XL", colorName: "Oliva", colorHex: "#AEAC9C" },
-                { size: "XL", colorName: "Negro", colorHex: "#000000" },
-                { size: "M", colorName: "Negro/Gris", colorGradient: ["#000000", "#808080"] },
-                { size: "L", colorName: "Negro/Blanco", colorGradient: ["#000000", "#FFFFFF"] },
-                { size: "XL", colorName: "Azul/Blanco", colorGradient: ["#000080", "#FFFFFF"] },
-                { size: "XL", colorName: "Gris/Fuccia", colorGradient: ["#808080", "#FF00FF"] },
-                { size: "XL", colorName: "Rojo", colorHex: "#FF0000" },
-                { size: "XXL", colorName: "Pastel", colorHex: "#FADADD" },
-                { size: "XXL", colorName: "Gris/Rojo", colorGradient: ["#808080", "#FF0000"] },
-                { size: "XXL", colorName: "Azul", colorHex: "#000080" },
-                { size: "XXL", colorName: "Negro", colorHex: "#000000" }
-            ]
+            id: 1,
+            title: "Look Clásico Completo",
+            desc: "Elegancia cotidiana con chomba de algodón premium y jean de corte moderno. El conjunto perfecto para el día a día con estilo.",
+            img: "img/chomba y jean.png",
+            category: "elegante",
+            gender: "hombre",
+            items: {
+                "Chomba": {
+                    price: 25000,
+                    variants: [
+                        { size: "M", colorName: "Rosa", colorHex: "#D2A1B6" },
+                        { size: "L", colorName: "Celeste", colorHex: "#99D1DC" },
+                        { size: "XL", colorName: "Oliva", colorHex: "#AEAC9C" },
+                        { size: "XL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "M", colorName: "Negro/Gris", colorGradient: ["#000000", "#808080"] },
+                        { size: "L", colorName: "Negro/Blanco", colorGradient: ["#000000", "#FFFFFF"] },
+                        { size: "XL", colorName: "Azul/Blanco", colorGradient: ["#000080", "#FFFFFF"] },
+                        { size: "XL", colorName: "Gris/Fuccia", colorGradient: ["#808080", "#FF00FF"] },
+                        { size: "XL", colorName: "Rojo", colorHex: "#FF0000" },
+                        { size: "XXL", colorName: "Pastel", colorHex: "#FADADD" },
+                        { size: "XXL", colorName: "Gris/Rojo", colorGradient: ["#808080", "#FF0000"] },
+                        { size: "XXL", colorName: "Azul", colorHex: "#000080" },
+                        { size: "XXL", colorName: "Negro", colorHex: "#000000" }
+                    ]
+                },
+                "Jean": {
+                    price: 35000,
+                    variants: [
+                        { size: "42", colorName: "Marrón", colorHex: "#8B4513" },
+                        { size: "46", colorName: "Negro", colorHex: "#000000" },
+                        { size: "50", colorName: "Azul", colorHex: "#000080" },
+                        { size: "42", colorName: "Celeste", colorHex: "#87CEEB" },
+                        { size: "54", colorName: "Celeste", colorHex: "#87CEEB" },
+                        { size: "52", colorName: "Azul", colorHex: "#000080" }
+                    ]
+                }
+            }
         },
-        "Jean": {
-            price: 35000,
-            variants: [
-                { size: "42", colorName: "Marrón", colorHex: "#8B4513" },
-                { size: "46", colorName: "Negro", colorHex: "#000000" },
-                { size: "50", colorName: "Azul", colorHex: "#000080" },
-                { size: "42", colorName: "Celeste", colorHex: "#87CEEB" },
-                { size: "54", colorName: "Celeste", colorHex: "#87CEEB" },
-                { size: "52", colorName: "Azul", colorHex: "#000080" }
-            ]
-        }
-    }
-},
         {
-    id: 13,
-    title: "Estilo Mao",
-    desc: "Sofisticación minimalista. Camisa mao de corte impecable combinada con un cinto de cuero negro esencial.",
-    img: "img/camisa mao.jpg", 
-    category: "sofisticado",
-    gender: "hombre",
-    items: {
-        "Camisa Mao": {
-            price: 25000,
-            variants: [
-                { size: "L", colorName: "Azul Marino", colorHex: "#000080" },
-                { size: "L", colorName: "Negro", colorHex: "#000000" }
-            ]
+            id: 13,
+            title: "Estilo Mao",
+            desc: "Sofisticación minimalista. Camisa mao de corte impecable combinada con un cinto de cuero negro esencial.",
+            img: "img/camisa mao.jpg", 
+            category: "sofisticado",
+            gender: "hombre",
+            items: {
+                "Camisa Mao": {
+                    price: 25000,
+                    variants: [
+                        { size: "L", colorName: "Azul Marino", colorHex: "#000080" },
+                        { size: "L", colorName: "Negro", colorHex: "#000000" }
+                    ]
+                },
+                "Cinto Negro": {
+                    price: 10000,
+                    variants: [
+                        { size: "Único", colorName: "Negro", colorHex: "#000000" }
+                    ]
+                }
+            }
         },
-        "Cinto Negro": {
-            price: 10000,
-            variants: [
-                { size: "Único", colorName: "Negro", colorHex: "#000000" }
-            ]
-        }
-    }
-},
         {
             id: 2,
             title: "Verano Waffle",
             desc: "Textura sofisticada para los días calurosos. Remera waffle de algodón respirable con short jean de corte relajado.",
             img: "img/wafle jean.png",
-            category: "fresco", // Cambiado
+            category: "fresco",
             gender: "hombre",
             items: {
                 "Remera Waffle": {
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Tropical Vibes",
             desc: "Estilo fresco y relajado. Remera hawai y pantalón de vestir para ocasiones casuales.",
             img: "img/hawai short vestir.png",
-            category: "tropical", // Cambiado
+            category: "tropical",
             gender: "hombre",
             items: {
                 "Remera Hawai": {
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Deportivo Total",
             desc: "Rendimiento y estilo. Remera deportiva dry-fit con tecnología de secado rápido y short rústico de alta durabilidad.",
             img: "img/remera deportiva short rustico.png",
-            category: "training", // Cambiado
+            category: "training",
             gender: "hombre",
             items: {
                 "Remera Deportiva": {
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Básico Essential",
             desc: "Menos es más. Remera lisa de algodón premium con short waffle texturado. La combinación perfecta.",
             img: "img/remera lisa short wafle.png",
-            category: "minimal", // Cambiado
+            category: "minimal",
             gender: "hombre",
             items: {
                 "Remera Lisa": {
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Urban Street",
             desc: "Estilo callejero con personalidad. Remera estampada de diseño exclusivo con pantalón waffle de corte moderno.",
             img: "img/remera estampada pantalon wafle.png",
-            category: "urbano", // Cambiado
+            category: "urbano",
             gender: "hombre",
             items: {
                 "Remera Estampada": {
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Frescura Natural",
             desc: "Máxima comodidad para el verano. Musculosa de algodón suave con pantalón de lino liviano y transpirable.",
             img: "img/musculosa pantalon lino.png",
-            category: "lino", // Cambiado
+            category: "lino",
             gender: "hombre",
             items: {
                 "Musculosa": {
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Vestido Elegante",
             desc: "Sofisticación en cada detalle. Vestido de corte favorecedor, ideal para ocasiones especiales o una salida con estilo.",
             img: "img/vestido.png",
-            category: "noche", // Cambiado
+            category: "noche",
             gender: "mujer",
             items: {
                 "Vestido Tira Gruesa": {
@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Casual Morley",
             desc: "Suavidad y estilo. Remera Morley de tacto ultrasuave con short rústico de alta durabilidad. Comodidad total.",
             img: "img/remera morley short rustico.png",
-            category: "confort", // Cambiado
+            category: "confort",
             gender: "mujer",
             items: {
                 "Remera Morley": {
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Coordinado Waffle",
             desc: "Look completo con textura. Remera y short waffle en tonos combinados. Estilo sofisticado y moderno.",
             img: "img/remera wafle pantalon wafle.png",
-            category: "coordinado", // Cambiado
+            category: "coordinado",
             gender: "mujer",
             items: {
                 "Remera Waffle": {
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Baby Tee Verano",
             desc: "Estilo juvenil y fresco. Baby tee ajustada con short de lino liviano. Perfecto para los días calurosos.",
             img: "img/baby tee short lino.png",
-            category: "trendy", // Cambiado
+            category: "trendy",
             gender: "mujer",
             items: {
                 "Baby Tee": {
@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Remerón Oversize",
             desc: "Comodidad y estilo relajado. Remerón de algodón premium de corte amplio. Ideal para un look urbano despreocupado.",
             img: "img/remeron.png",
-            category: "oversize", // Cambiado
+            category: "oversize",
             gender: "mujer",
             items: {
                 "Remerón Oversize": {
@@ -450,8 +450,43 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 }
             }
+        },
+        {
+            id: 14,
+            title: "Musculosa Verano",
+            desc: "Frescura y estilo en una sola prenda. Musculosa de mujer de talle único, ideal para los días calurosos.",
+            img: "img/musculosa mujer.jpg",
+            category: "fresco",
+            gender: "mujer",
+            items: {
+                "Musculosa": {
+                    price: 13000,
+                    variants: [
+                        { size: "Único", colorName: "Amarillo Mostaza", colorHex: "#FFDB58" },
+                        { size: "Único", colorName: "Azul", colorHex: "#000080" },
+                        { size: "Único", colorName: "Rosa Pastel", colorHex: "#FFD1DC" },
+                        { size: "Único", colorName: "Rosa", colorHex: "#FF69B4" },
+                        { size: "Único", colorName: "Verde Agua", colorHex: "#66CDAA" },
+                        { size: "Único", colorName: "Verde Pastel", colorHex: "#C1E1C1" }
+                    ]
+                }
+            }
         }
     ];
+
+    const combos = [
+    {
+        id: 1,
+        title: "Combo Waffle + Musculosa",
+        description: "Remera Waffle de mujer + Musculosa de mujer. El dúo perfecto para el verano.",
+        items: [
+            { modelId: 10, itemName: "Remera Waffle", individualPrice: 18000 },
+            { modelId: 14, itemName: "Musculosa", individualPrice: 13000 }  // ← CORREGIDO
+        ],
+        comboPrice: 23000,
+        images: ["img/remera wafle pantalon wafle.png", "img/musculosa mujer.jpg"]
+    }
+];
 
     const calculateListPrice = (price) => Math.round(price * 1.176);
 
@@ -463,10 +498,55 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const container = document.getElementById('product-container');
+    const offersContainer = document.getElementById('offers-container');
     const searchInput = document.getElementById('search-input');
     const filterButtons = document.querySelectorAll('.filter-btn');
     let currentFilter = 'todos';
     let currentSearch = '';
+
+    const renderOffers = () => {
+        offersContainer.innerHTML = '';
+        
+        if (combos.length === 0) {
+            offersContainer.innerHTML = '<p style="text-align: center; grid-column: 1/-1; color: #999;">No hay ofertas disponibles por el momento.</p>';
+            return;
+        }
+
+        combos.forEach(combo => {
+            const originalPrice = combo.items.reduce((sum, item) => sum + item.individualPrice, 0);
+            const savings = originalPrice - combo.comboPrice;
+            const itemsList = combo.items.map(item => `<strong>${item.itemName}</strong>`).join(' + ');
+
+            const collageHtml = combo.images.map(img => `<img src="${img}" alt="${combo.title}">`).join('');
+
+            const card = document.createElement('div');
+            card.className = 'offer-card';
+            card.innerHTML = `
+                <span class="offer-badge">AHORRÁ $${savings.toLocaleString()}</span>
+                <div class="offer-collage">${collageHtml}</div>
+                <div class="offer-info">
+                    <h3 class="offer-title">${combo.title}</h3>
+                    <p class="offer-items-list">Incluye: ${itemsList}</p>
+                    <div class="offer-prices">
+                        <span class="offer-price-original">$${originalPrice.toLocaleString()}</span>
+                        <span class="offer-price-combo">$${combo.comboPrice.toLocaleString()}</span>
+                        <span class="offer-savings">-${Math.round((savings/originalPrice)*100)}%</span>
+                    </div>
+                    <button class="btn-view-combo" data-combo-id="${combo.id}">
+                        <i class="fas fa-gift"></i> Ver Combo
+                    </button>
+                </div>
+            `;
+            offersContainer.appendChild(card);
+        });
+
+        document.querySelectorAll('.btn-view-combo').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const comboId = parseInt(e.currentTarget.dataset.comboId);
+                openComboModal(comboId);
+            });
+        });
+    };
 
     const renderProducts = () => {
         container.innerHTML = '';
@@ -692,6 +772,204 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === productModal) productModal.classList.remove('active');
     });
 
+    const comboModal = document.getElementById('combo-modal');
+    const comboModalTitle = document.getElementById('combo-modal-title');
+    const comboModalDesc = document.getElementById('combo-modal-desc');
+    const comboItemsArea = document.getElementById('combo-items-area');
+    const comboSummaryArea = document.getElementById('combo-summary-area');
+    const closeComboModal = document.getElementById('close-combo-modal');
+
+    let comboState = {
+        comboId: null,
+        selections: {}
+    };
+
+    const openComboModal = (comboId) => {
+        const combo = combos.find(c => c.id === comboId);
+        if (!combo) return;
+
+        comboState = { comboId, selections: {} };
+        combo.items.forEach(item => {
+            comboState.selections[item.modelId] = {
+                itemName: item.itemName,
+                selectedSize: null,
+                selectedColor: null
+            };
+        });
+
+        comboModalTitle.textContent = combo.title;
+        comboModalDesc.textContent = combo.description;
+
+        renderComboItems();
+        renderComboSummary();
+
+        comboModal.classList.add('active');
+    };
+
+    const renderComboItems = () => {
+        const combo = combos.find(c => c.id === comboState.comboId);
+        comboItemsArea.innerHTML = '';
+
+        combo.items.forEach(comboItem => {
+            const model = models.find(m => m.id === comboItem.modelId);
+            const itemData = model.items[comboItem.itemName];
+            const state = comboState.selections[comboItem.modelId];
+            const availableSizes = [...new Set(itemData.variants.map(v => v.size))];
+
+            const block = document.createElement('div');
+            block.className = 'combo-item-block';
+            block.innerHTML = `
+                <h4>${comboItem.itemName} <span style="font-weight: 400; color: #999; font-size: 0.85rem;">(Valor individual: $${comboItem.individualPrice.toLocaleString()})</span></h4>
+                <div class="selection-section">
+                    <div class="selection-label">Talle</div>
+                    <div class="size-buttons" data-model-id="${comboItem.modelId}" data-field="size">
+                        ${availableSizes.map(size => `
+                            <button class="size-btn ${state.selectedSize === size ? 'active' : ''}" data-size="${size}">
+                                ${size}
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+                <div class="combo-colors-area" data-model-id="${comboItem.modelId}"></div>
+            `;
+            comboItemsArea.appendChild(block);
+
+            const sizeButtons = block.querySelector('.size-buttons');
+            sizeButtons.querySelectorAll('.size-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    sizeButtons.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    state.selectedSize = btn.dataset.size;
+                    state.selectedColor = null;
+                    renderComboColors(comboItem.modelId);
+                    renderComboSummary();
+                });
+            });
+
+            renderComboColors(comboItem.modelId);
+        });
+    };
+
+    const renderComboColors = (modelId) => {
+        const combo = combos.find(c => c.id === comboState.comboId);
+        const comboItem = combo.items.find(i => i.modelId === modelId);
+        const model = models.find(m => m.id === modelId);
+        const itemData = model.items[comboItem.itemName];
+        const state = comboState.selections[modelId];
+        const colorsArea = comboItemsArea.querySelector(`.combo-colors-area[data-model-id="${modelId}"]`);
+
+        if (!state.selectedSize) {
+            colorsArea.innerHTML = '<p class="empty-message" style="padding: 10px 0;">Seleccioná un talle</p>';
+            return;
+        }
+
+        const variantsForSize = itemData.variants.filter(v => v.size === state.selectedSize);
+        colorsArea.innerHTML = `
+            <div class="selection-section">
+                <div class="selection-label">Color</div>
+                <div class="colors-grid">
+                    ${variantsForSize.map((variant, i) => `
+                        <div class="color-option ${state.selectedColor === i ? 'selected' : ''}" data-color-index="${i}">
+                            <span class="color-swatch" style="${getColorStyle(variant)}" title="${variant.colorName}"></span>
+                            <span class="color-label">${variant.colorName}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+
+        colorsArea.querySelectorAll('.color-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                colorsArea.querySelectorAll('.color-option').forEach(o => o.classList.remove('selected'));
+                opt.classList.add('selected');
+                state.selectedColor = parseInt(opt.dataset.colorIndex);
+                renderComboSummary();
+            });
+        });
+    };
+
+    const renderComboSummary = () => {
+        const combo = combos.find(c => c.id === comboState.comboId);
+        const originalPrice = combo.items.reduce((sum, item) => sum + item.individualPrice, 0);
+        const allSelected = combo.items.every(item => {
+            const state = comboState.selections[item.modelId];
+            return state.selectedSize !== null && state.selectedColor !== null;
+        });
+
+        let selectionsText = '';
+        if (allSelected) {
+            selectionsText = combo.items.map(item => {
+                const model = models.find(m => m.id === item.modelId);
+                const itemData = model.items[item.itemName];
+                const state = comboState.selections[item.modelId];
+                const variant = itemData.variants.filter(v => v.size === state.selectedSize)[state.selectedColor];
+                return `<div style="font-size: 0.85rem; color: #666; margin-bottom: 4px;">✓ <strong>${item.itemName}</strong>: Talle ${state.selectedSize} - ${variant.colorName}</div>`;
+            }).join('');
+        }
+
+        comboSummaryArea.innerHTML = `
+            <div class="combo-summary">
+                ${allSelected ? `<div style="margin-bottom: 12px;">${selectionsText}</div>` : '<p style="font-size: 0.9rem; color: #666; margin-bottom: 12px;">Completá la selección de cada prenda</p>'}
+                <div class="combo-summary-prices">
+                    <div>
+                        <div style="text-decoration: line-through; color: #999; font-size: 0.9rem;">Antes: $${originalPrice.toLocaleString()}</div>
+                        <div style="font-weight: 800; color: #ff6b6b; font-size: 1.5rem;">Combo: $${combo.comboPrice.toLocaleString()}</div>
+                    </div>
+                    <div style="background: #fff3cd; color: #856404; padding: 6px 12px; border-radius: 12px; font-weight: 700;">
+                        Ahorrás $${(originalPrice - combo.comboPrice).toLocaleString()}
+                    </div>
+                </div>
+                <button class="btn-add-combo" id="btn-add-combo" ${!allSelected ? 'disabled' : ''}>
+                    <i class="fas fa-gift"></i> Agregar Combo al Carrito
+                </button>
+            </div>
+        `;
+
+        if (allSelected) {
+            document.getElementById('btn-add-combo').addEventListener('click', () => {
+                const combo = combos.find(c => c.id === comboState.comboId);
+                const cartItems = combo.items.map(item => {
+                    const model = models.find(m => m.id === item.modelId);
+                    const itemData = model.items[item.itemName];
+                    const state = comboState.selections[item.modelId];
+                    const variant = itemData.variants.filter(v => v.size === state.selectedSize)[state.selectedColor];
+                    return {
+                        modelTitle: model.title,
+                        item: { name: item.itemName, price: item.individualPrice },
+                        size: state.selectedSize,
+                        color: variant.colorName,
+                        isCombo: true,
+                        comboTitle: combo.title
+                    };
+                });
+
+                const totalComboPrice = combo.comboPrice;
+                const totalIndividualPrice = combo.items.reduce((sum, item) => sum + item.individualPrice, 0);
+                const ratio = totalComboPrice / totalIndividualPrice;
+
+                cartItems.forEach(cartItem => {
+                    cartItem.item.price = Math.round(cartItem.item.price * ratio);
+                    cart.push(cartItem);
+                });
+
+                updateCartUI();
+
+                const btn = document.getElementById('btn-add-combo');
+                btn.classList.add('added');
+                btn.innerHTML = '<i class="fas fa-check"></i> ¡Combo Agregado!';
+
+                setTimeout(() => {
+                    comboModal.classList.remove('active');
+                }, 1200);
+            });
+        }
+    };
+
+    closeComboModal.addEventListener('click', () => comboModal.classList.remove('active'));
+    comboModal.addEventListener('click', (e) => {
+        if (e.target === comboModal) comboModal.classList.remove('active');
+    });
+
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             filterButtons.forEach(b => b.classList.remove('active'));
@@ -706,7 +984,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderProducts();
     });
 
-    // === CARRITO CON LÓGICA DE ENVÍO ===
     let cart = [];
     const cartBtn = document.getElementById('cart-btn');
     const cartModal = document.getElementById('cart-modal');
@@ -736,9 +1013,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let subtotal = 0;
         cartItemsContainer.innerHTML = cart.map((item, index) => {
             subtotal += item.item.price;
+            const comboBadge = item.isCombo ? `<div class="cart-item-details" style="color: #ff6b6b; font-weight: 600;"><i class="fas fa-gift"></i> ${item.comboTitle}</div>` : '';
             return `
-                <div class="cart-item">
+                <div class="cart-item ${item.isCombo ? 'combo-item' : ''}">
                     <div class="cart-item-title">${item.modelTitle}</div>
+                    ${comboBadge}
                     <div class="cart-item-details"><strong>${item.item.name}</strong></div>
                     <div class="cart-item-details">Talle: ${item.size} | Color: ${item.color}</div>
                     <div class="cart-item-details">Precio: $${item.item.price.toLocaleString()}</div>
@@ -789,7 +1068,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let message = '¡Hola! Me interesa consultar disponibilidad de:\n\n';
         cart.forEach((item, i) => {
             subtotal += item.item.price;
-            message += `${i + 1}. ${item.modelTitle} - ${item.item.name}\n`;
+            if (item.isCombo) {
+                message += `${i + 1}. 🔥 ${item.comboTitle}\n`;
+            } else {
+                message += `${i + 1}. ${item.modelTitle}\n`;
+            }
+            message += `   • ${item.item.name}\n`;
             message += `   • Talle: ${item.size}\n`;
             message += `   • Color: ${item.color}\n`;
             message += `   • Precio: $${item.item.price.toLocaleString()}\n\n`;
@@ -810,11 +1094,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
 
+    renderOffers();
     renderProducts();
     updateCartUI();
 });
 
-// Deshabilitar click derecho
 document.addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
