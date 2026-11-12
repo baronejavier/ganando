@@ -477,11 +477,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const combos = [
     {
         id: 1,
+        title: "Combo Waffle + Jean",
+        description: "Remera Waffle de hombre + Jean de corte moderno. El look completo con un precio increíble.",
+        items: [
+            { modelId: 2, itemName: "Remera Waffle", individualPrice: 18000 },
+            { modelId: 1, itemName: "Jean", individualPrice: 35000 }
+        ],
+        comboPrice: 28000,
+        images: ["img/wafle jean.png", "img/chomba y jean.png"]
+    },
+    {
+        id: 2,
         title: "Combo Waffle + Musculosa",
         description: "Remera Waffle de mujer + Musculosa de mujer. El dúo perfecto para el verano.",
         items: [
             { modelId: 10, itemName: "Remera Waffle", individualPrice: 18000 },
-            { modelId: 14, itemName: "Musculosa", individualPrice: 13000 }  // ← CORREGIDO
+            { modelId: 14, itemName: "Musculosa", individualPrice: 13000 }
         ],
         comboPrice: 23000,
         images: ["img/remera wafle pantalon wafle.png", "img/musculosa mujer.jpg"]
