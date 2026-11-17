@@ -74,27 +74,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Remera Waffle": {
                     price: 18000,
                     variants: [
-                        { size: "XXL", colorName: "Beige claro", colorHex: "#AEBAAE" },
-                        { size: "XXL", colorName: "Beige oscuro", colorHex: "#A59D8E" },
-                        { size: "XXL", colorName: "Negro", colorHex: "#000000" },
-                        { size: "XXL", colorName: "Verde Oliva Oscuro", colorHex: "#556B2F" },
-                        { size: "XXL", colorName: "Blanco", colorHex: "#FFFFFF" },
-                        { size: "XL", colorName: "Marrón oscuro", colorHex: "#371F29" },
-                        { size: "XL", colorName: "Azul", colorHex: "#000080" },
-                        { size: "L", colorName: "Beige", colorHex: "#a9a083" },
-                        { size: "L", colorName: "Verde oscuro", colorHex: "#0b4231" },
-                        { size: "L", colorName: "Rojo", colorHex: "#FF0000" },
-                        { size: "L", colorName: "Gris claro", colorHex: "#c8c4b4" },
-                        { size: "M", colorName: "Marrón", colorHex: "#8B4513" },
-                        { size: "M", colorName: "Azul", colorHex: "#000080" },
-                        { size: "M", colorName: "Gris beige", colorHex: "#ced2c8" },
-                        { size: "M", colorName: "Marrón rojizo", colorHex: "#6b404c" },
-                        { size: "M", colorName: "Marrón grisáceo", colorHex: "#8d7b68" },
-                        { size: "M", colorName: "Verde grisáceo", colorHex: "#2d3936" },
-                        { size: "M", colorName: "Negro", colorHex: "#000000" },
+                        { size: "S", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "S", colorName: "Celeste", colorHex: "#87CEEB" },
+                        { size: "S", colorName: "Negro", colorHex: "#000000" },
                         { size: "S", colorName: "Azul", colorHex: "#000080" },
-                        { size: "S", colorName: "Rojo", colorHex: "#FF0000" },
-                        { size: "S", colorName: "Negro", colorHex: "#000000" }
+                        { size: "M", colorName: "Negro", colorHex: "#000000" },
+                        { size: "M", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "M", colorName: "Marrón Oscuro", colorHex: "#8B4513" },
+                        { size: "M", colorName: "Azul", colorHex: "#000080" },
+                        { size: "M", colorName: "Champagne", colorHex: "#F7E7CE" },
+                        { size: "L", colorName: "Verde Oscuro", colorHex: "#0b4231" },
+                        { size: "L", colorName: "Negro", colorHex: "#000000" },
+                        { size: "L", colorName: "Pastel", colorHex: "#F0EAD6" },
+                        { size: "L", colorName: "Blanco Roto", colorHex: "#FAF9F6" },
+                        { size: "L", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "XL", colorName: "Azul", colorHex: "#000080" },
+                        { size: "XL", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "XL", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "XL", colorName: "Rojo", colorHex: "#FF0000" },
+                        { size: "XL", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "XL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XL", colorName: "Marrón Oscuro", colorHex: "#8B4513" },
+                        { size: "XXL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXL", colorName: "Verde", colorHex: "#228B22" },
+                        { size: "XXL", colorName: "Marrón Oscuro", colorHex: "#8B4513" },
+                        { size: "XXL", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "XXL", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "XXL", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "XXXL", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "XXXL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXXL", colorName: "Verde", colorHex: "#228B22" },
+                        { size: "XXXL", colorName: "Gris", colorHex: "#808080" },
+                        { size: "XXXL", colorName: "Blanco", colorHex: "#FFFFFF" }
                     ]
                 },
                 "Short Jean": {
@@ -120,21 +131,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Remera Hawai": {
                     price: 18000,
                     variants: [
-                        { size: "XXL", colorName: "Amarillo verdoso", colorHex: "#DADC7D" },
-                        { size: "XXL", colorName: "Gris beige", colorHex: "#C2C4B9" },
-                        { size: "XXL", colorName: "Negro", colorHex: "#000000" },
-                        { size: "XXL", colorName: "Verde menta", colorHex: "#DDEAE0" },
-                        { size: "XXL", colorName: "Pastel", colorHex: "#F0EAD6" },
-                        { size: "XL", colorName: "Verde Pastel", colorHex: "#C1E1C1" },
-                        { size: "XL", colorName: "Celeste", colorHex: "#87CEEB" },
-                        { size: "XL", colorName: "Marrón", colorHex: "#8B4513" },
-                        { size: "L", colorName: "Celeste", colorHex: "#87CEEB" },
-                        { size: "L", colorName: "Negro", colorHex: "#000000" },
-                        { size: "M", colorName: "Cobre", colorHex: "#B87333" },
-                        { size: "M", colorName: "Marrón", colorHex: "#8B4513" },
+                        { size: "S", colorName: "Marrón Claro", colorHex: "#D2B48C" },
                         { size: "S", colorName: "Negro", colorHex: "#000000" },
-                        { size: "S", colorName: "Beige", colorHex: "#DBD3CA" },
-                        { size: "S", colorName: "Celeste", colorHex: "#87CEEB" }
+                        { size: "S", colorName: "Celeste", colorHex: "#87CEEB" },
+                        { size: "M", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "M", colorName: "Marrón Oscuro", colorHex: "#8B4513" },
+                        { size: "L", colorName: "Celeste", colorHex: "#87CEEB" },
+                        { size: "XL", colorName: "Verde Agua", colorHex: "#66CDAA" },
+                        { size: "XL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXL", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "XXL", colorName: "Marrón Oscuro", colorHex: "#8B4513" },
+                        { size: "XXL", colorName: "Verde Agua", colorHex: "#66CDAA" },
+                        { size: "XXL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXL", colorName: "Blanco", colorHex: "#FFFFFF" }
                     ]
                 },
                 "Pantalón de Vestir": {
@@ -160,18 +169,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Remera Deportiva": {
                     price: 18000,
                     variants: [
-                        { size: "XXXL", colorName: "Azul Marino", colorHex: "#000080" },
-                        { size: "XXL", colorName: "Verde Oliva", colorHex: "#6B8E23" },
-                        { size: "XXL", colorName: "Gris claro", colorHex: "#DEE1D9" },
-                        { size: "XXL", colorName: "Gris oscuro", colorHex: "#555555" },
-                        { size: "XL", colorName: "Verde claro", colorHex: "#97DD7A" },
-                        { size: "XL", colorName: "Negro", colorHex: "#000000" },
-                        { size: "XL", colorName: "Beige", colorHex: "#C2BDB3" },
-                        { size: "L", colorName: "Rosa/nude", colorHex: "#DAB3B3" },
-                        { size: "L", colorName: "Amarillo", colorHex: "#FFD700" },
-                        { size: "M", colorName: "Blanco", colorHex: "#FFFFFF" },
                         { size: "S", colorName: "Amarillo", colorHex: "#FFD700" },
-                        { size: "S", colorName: "Azul", colorHex: "#0000FF" }
+                        { size: "S", colorName: "Negro", colorHex: "#000000" },
+                        { size: "M", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "M", colorName: "Gris", colorHex: "#808080" },
+                        { size: "L", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "L", colorName: "Amarillo", colorHex: "#FFD700" },
+                        { size: "XL", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "XL", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "XL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXL", colorName: "Verde Manzana", colorHex: "#8DB600" },
+                        { size: "XXL", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "XXL", colorName: "Marrón Claro", colorHex: "#D2B48C" }
                     ]
                 },
                 "Short Rústico": {
@@ -204,17 +213,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Remera Lisa": {
                     price: 18000,
                     variants: [
-                        { size: "XL", colorName: "Negro", colorHex: "#000000" },
-                        { size: "XL", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "S", colorName: "Gris", colorHex: "#808080" },
+                        { size: "S", colorName: "Azul Marino", colorHex: "#000080" },
+                        { size: "M", colorName: "Rojo", colorHex: "#FF0000" },
+                        { size: "M", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "M", colorName: "Negro", colorHex: "#000000" },
                         { size: "L", colorName: "Amarillo", colorHex: "#FFD700" },
                         { size: "L", colorName: "Rojo", colorHex: "#FF0000" },
-                        { size: "M", colorName: "Negro", colorHex: "#000000" },
-                        { size: "M", colorName: "Blanco", colorHex: "#FFFFFF" },
-                        { size: "M", colorName: "Vino Tinto", colorHex: "#722F37" },
-                        { size: "S", colorName: "Azul", colorHex: "#000080" },
-                        { size: "S", colorName: "Gris", colorHex: "#808080" },
-                        { size: "S", colorName: "Blanco", colorHex: "#FFFFFF" },
-                        { size: "S", colorName: "Negro", colorHex: "#000000" }
+                        { size: "XL", colorName: "Gris", colorHex: "#808080" },
+                        { size: "XL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XL", colorName: "Rojo", colorHex: "#FF0000" },
+                        { size: "XXL", colorName: "Azul", colorHex: "#000080" },
+                        { size: "XXL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXL", colorName: "Verde Agua", colorHex: "#66CDAA" },
+                        { size: "XXXL", colorName: "Verde", colorHex: "#228B22" },
+                        { size: "XXXL", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "XXXL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXXL", colorName: "Blanco", colorHex: "#FFFFFF" }
                     ]
                 },
                 "Short Waffle": {
@@ -293,6 +308,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
+            id: 15,
+            title: "Jean Elastizado",
+            desc: "Comodidad y estilo en un solo jean. Denim elastizado de corte moderno que se adapta a tu cuerpo.",
+            img: "img/jean elastizado.jpg",
+            category: "elastizado",
+            gender: "hombre",
+            items: {
+                "Jean Elastizado": {
+                    price: 15000,
+                    variants: [
+                        { size: "42", colorName: "Marrón Anaranjado", colorHex: "#CD853F" },
+                        { size: "44", colorName: "Marrón Anaranjado", colorHex: "#CD853F" }
+                    ]
+                }
+            }
+        },
+        {
             id: 8,
             title: "Vestido Elegante",
             desc: "Sofisticación en cada detalle. Vestido de corte favorecedor, ideal para ocasiones especiales o una salida con estilo.",
@@ -365,27 +397,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Remera Waffle": {
                     price: 18000,
                     variants: [
-                        { size: "XXL", colorName: "Beige claro", colorHex: "#AEBAAE" },
-                        { size: "XXL", colorName: "Beige oscuro", colorHex: "#A59D8E" },
-                        { size: "XXL", colorName: "Negro", colorHex: "#000000" },
-                        { size: "XXL", colorName: "Verde Oliva Oscuro", colorHex: "#556B2F" },
-                        { size: "XXL", colorName: "Blanco", colorHex: "#FFFFFF" },
-                        { size: "XL", colorName: "Marrón oscuro", colorHex: "#371F29" },
-                        { size: "XL", colorName: "Azul", colorHex: "#000080" },
-                        { size: "L", colorName: "Beige", colorHex: "#a9a083" },
-                        { size: "L", colorName: "Verde oscuro", colorHex: "#0b4231" },
-                        { size: "L", colorName: "Rojo", colorHex: "#FF0000" },
-                        { size: "L", colorName: "Gris claro", colorHex: "#c8c4b4" },
-                        { size: "M", colorName: "Marrón", colorHex: "#8B4513" },
-                        { size: "M", colorName: "Azul", colorHex: "#000080" },
-                        { size: "M", colorName: "Gris beige", colorHex: "#ced2c8" },
-                        { size: "M", colorName: "Marrón rojizo", colorHex: "#6b404c" },
-                        { size: "M", colorName: "Marrón grisáceo", colorHex: "#8d7b68" },
-                        { size: "M", colorName: "Verde grisáceo", colorHex: "#2d3936" },
-                        { size: "M", colorName: "Negro", colorHex: "#000000" },
+                        { size: "S", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "S", colorName: "Celeste", colorHex: "#87CEEB" },
+                        { size: "S", colorName: "Negro", colorHex: "#000000" },
                         { size: "S", colorName: "Azul", colorHex: "#000080" },
-                        { size: "S", colorName: "Rojo", colorHex: "#FF0000" },
-                        { size: "S", colorName: "Negro", colorHex: "#000000" }
+                        { size: "M", colorName: "Negro", colorHex: "#000000" },
+                        { size: "M", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "M", colorName: "Marrón Oscuro", colorHex: "#8B4513" },
+                        { size: "M", colorName: "Azul", colorHex: "#000080" },
+                        { size: "M", colorName: "Champagne", colorHex: "#F7E7CE" },
+                        { size: "L", colorName: "Verde Oscuro", colorHex: "#0b4231" },
+                        { size: "L", colorName: "Negro", colorHex: "#000000" },
+                        { size: "L", colorName: "Pastel", colorHex: "#F0EAD6" },
+                        { size: "L", colorName: "Blanco Roto", colorHex: "#FAF9F6" },
+                        { size: "L", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "XL", colorName: "Azul", colorHex: "#000080" },
+                        { size: "XL", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "XL", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "XL", colorName: "Rojo", colorHex: "#FF0000" },
+                        { size: "XL", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "XL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XL", colorName: "Marrón Oscuro", colorHex: "#8B4513" },
+                        { size: "XXL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXL", colorName: "Verde", colorHex: "#228B22" },
+                        { size: "XXL", colorName: "Marrón Oscuro", colorHex: "#8B4513" },
+                        { size: "XXL", colorName: "Marrón Claro", colorHex: "#D2B48C" },
+                        { size: "XXL", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "XXL", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "XXXL", colorName: "Vino Tinto", colorHex: "#722F37" },
+                        { size: "XXXL", colorName: "Negro", colorHex: "#000000" },
+                        { size: "XXXL", colorName: "Verde", colorHex: "#228B22" },
+                        { size: "XXXL", colorName: "Gris", colorHex: "#808080" },
+                        { size: "XXXL", colorName: "Blanco", colorHex: "#FFFFFF" }
                     ]
                 },
                 "Short Waffle": {
@@ -441,12 +484,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Remerón Oversize": {
                     price: 18000,
                     variants: [
-                        { size: "L", colorName: "Verde Fluor", colorHex: "#7FFF00" },
-                        { size: "L", colorName: "Azul Marino", colorHex: "#000080" },
-                        { size: "L", colorName: "Mostaza", colorHex: "#FFDB58" },
-                        { size: "L", colorName: "Amarillo", colorHex: "#FFD700" },
-                        { size: "XL", colorName: "Verde Fluor", colorHex: "#7FFF00" },
-                        { size: "XL", colorName: "Negro", colorHex: "#000000" }
+                        { size: "Único", colorName: "Blanco", colorHex: "#FFFFFF" },
+                        { size: "Único", colorName: "Champagne", colorHex: "#F7E7CE" }
                     ]
                 }
             }
@@ -471,33 +510,49 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 }
             }
+        },
+        {
+            id: 16,
+            title: "Vestido de Playa",
+            desc: "Elegancia playera. Vestido blanco de talle único, perfecto para la playa o una tarde de verano.",
+            img: "img/vestido playa.jpg",
+            category: "playa",
+            gender: "mujer",
+            items: {
+                "Vestido de Playa": {
+                    price: 25000,
+                    variants: [
+                        { size: "Único", colorName: "Blanco", colorHex: "#FFFFFF" }
+                    ]
+                }
+            }
         }
     ];
 
     const combos = [
-    {
-        id: 1,
-        title: "Combo Waffle + Jean",
-        description: "Remera Waffle de hombre + Jean de corte moderno. El look completo con un precio increíble.",
-        items: [
-            { modelId: 2, itemName: "Remera Waffle", individualPrice: 18000 },
-            { modelId: 1, itemName: "Jean", individualPrice: 35000 }
-        ],
-        comboPrice: 28000,
-        images: ["img/wafle jean.png", "img/chomba y jean.png"]
-    },
-    {
-        id: 2,
-        title: "Combo Waffle + Musculosa",
-        description: "Remera Waffle de mujer + Musculosa de mujer. El dúo perfecto para el verano.",
-        items: [
-            { modelId: 10, itemName: "Remera Waffle", individualPrice: 18000 },
-            { modelId: 14, itemName: "Musculosa", individualPrice: 13000 }
-        ],
-        comboPrice: 23000,
-        images: ["img/remera wafle pantalon wafle.png", "img/musculosa mujer.jpg"]
-    }
-];
+        {
+            id: 2,
+            title: "Combo Waffle + Jean Elastizado",
+            description: "Remera Waffle de hombre + Jean Elastizado. El look completo con un precio increíble.",
+            items: [
+                { modelId: 2, itemName: "Remera Waffle", individualPrice: 18000 },
+                { modelId: 15, itemName: "Jean Elastizado", individualPrice: 15000 }
+            ],
+            comboPrice: 28000,
+            images: ["img/wafle jean.png", "img/jean elastizado.jpg"]
+        },
+        {
+            id: 1,
+            title: "Combo Waffle + Musculosa",
+            description: "Remera Waffle de mujer + Musculosa de mujer. El dúo perfecto para el verano.",
+            items: [
+                { modelId: 10, itemName: "Remera Waffle", individualPrice: 18000 },
+                { modelId: 14, itemName: "Musculosa", individualPrice: 13000 }
+            ],
+            comboPrice: 23000,
+            images: ["img/remera wafle pantalon wafle.png", "img/musculosa mujer.jpg"]
+        }
+    ];
 
     const calculateListPrice = (price) => Math.round(price * 1.176);
 

@@ -19,6 +19,8 @@
     --border-coordinado: #3498db;
     --border-trendy: #ff6b9d;
     --border-oversize: #f39c12;
+    --border-playa: #38bdf8;
+    --border-elastizado: #06b6d4;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -375,6 +377,8 @@ ul { list-style: none; }
 .tag-coordinado { border-left-color: var(--border-coordinado); color: var(--border-coordinado); }
 .tag-trendy { border-left-color: var(--border-trendy); color: var(--border-trendy); }
 .tag-oversize { border-left-color: var(--border-oversize); color: var(--border-oversize); }
+.tag-playa { border-left-color: var(--border-playa); color: var(--border-playa); }
+.tag-elastizado { border-left-color: var(--border-elastizado); color: var(--border-elastizado); }
 
 .model-img { 
     width: 100%;
