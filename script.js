@@ -536,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Remera Waffle de hombre + Jean Elastizado. El look completo con un precio increíble.",
             items: [
                 { modelId: 2, itemName: "Remera Waffle", individualPrice: 18000 },
-                { modelId: 15, itemName: "Jean Elastizado", individualPrice: 15000 }
+                { modelId: 15, itemName: "Jean Elastizado", individualPrice: 35000 }
             ],
             comboPrice: 28000,
             images: ["img/wafle jean.png", "img/jean elastizado.jpg"]
