@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gender: "hombre",
             items: {
                 "Jean Elastizado": {
-                    price: 15000,
+                    price: 35000,
                     variants: [
                         { size: "42", colorName: "Marrón Anaranjado", colorHex: "#CD853F" },
                         { size: "44", colorName: "Marrón Anaranjado", colorHex: "#CD853F" }
