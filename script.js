@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { modelId: 15, itemName: "Jean Elastizado", individualPrice: 35000 }
             ],
             comboPrice: 28000,
-            images: ["img/wafle jean.png", "img/jean elastizado.jpg"]
+            images: ["img/jean elastizado.jpg","img/jean elastizado mujer.jpg"]
         },
         {
             id: 1,
