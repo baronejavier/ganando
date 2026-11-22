@@ -554,7 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    const calculateListPrice = (price) => Math.round(price * 1.176);
+    const calculateListPrice = (price) => Math.round(price * 1.10);
 
     const getColorStyle = (variant) => {
         if (variant.colorGradient) {
@@ -801,8 +801,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <strong>${modalState.selectedItem}</strong> - Talle ${modalState.selectedSize} - ${variant.colorName}
                 </div>
                 <div class="summary-price">
-                    <div class="price-original">$${listPrice.toLocaleString()}</div>
-                    <div class="price-discount">$${itemData.price.toLocaleString()}</div>
+                    <div class="price-original">Lista (tarjeta/QR): $${listPrice.toLocaleString()}</div>
+                    <div class="price-discount">Efectivo/Transf.: $${itemData.price.toLocaleString()}</div>
                 </div>
                 <button class="btn-add-selection" id="btn-confirm-add">
                     <i class="fas fa-plus"></i> Agregar
@@ -1059,6 +1059,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartSubtotalEl = document.getElementById('cart-subtotal');
     const cartShippingEl = document.getElementById('cart-shipping');
     const cartTotalEl = document.getElementById('cart-total');
+    const cartTotalCardEl = document.getElementById('cart-total-card');
     const shippingMsgEl = document.getElementById('shipping-msg');
     const sendWhatsapp = document.getElementById('send-whatsapp');
 
@@ -1070,6 +1071,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cartSubtotalEl.textContent = '$0';
             cartShippingEl.textContent = '$0';
             cartTotalEl.textContent = '$0';
+            cartTotalCardEl.textContent = '$0';
             shippingMsgEl.innerHTML = '<p><i class="fas fa-truck"></i> Envío: $3.000 | <strong>Gratis</strong> en Posadas y Garupá por compras superiores a $60.000</p>';
             shippingMsgEl.style.background = '#e8f5e9';
             shippingMsgEl.style.color = '#2e7d32';
@@ -1096,10 +1098,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const shippingCost = subtotal >= 60000 ? 0 : 3000;
         const total = subtotal + shippingCost;
+        const totalWithCard = Math.round(total * 1.10);
 
         cartSubtotalEl.textContent = `$${subtotal.toLocaleString()}`;
         cartShippingEl.textContent = shippingCost === 0 ? 'Gratis' : `$${shippingCost.toLocaleString()}`;
         cartTotalEl.textContent = `$${total.toLocaleString()}`;
+        cartTotalCardEl.textContent = `$${totalWithCard.toLocaleString()}`;
         
         if (shippingCost === 0) {
             shippingMsgEl.innerHTML = '<p><i class="fas fa-check-circle"></i> ¡Tenés <strong>Envío Gratis</strong>!</p>';
@@ -1147,10 +1151,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const shippingCost = subtotal >= 60000 ? 0 : 3000;
         const total = subtotal + shippingCost;
+        const totalWithCard = Math.round(total * 1.10);
 
         message += `💰 Subtotal: $${subtotal.toLocaleString()}\n`;
         message += `🚚 Envío: ${shippingCost === 0 ? 'Gratis' : '$3.000'}\n`;
-        message += `✅ Total estimado: $${total.toLocaleString()}`;
+        message += `✅ Total (Efectivo/Transferencia): $${total.toLocaleString()}\n`;
+        message += `💳 Total (Tarjeta/Débito/QR): $${totalWithCard.toLocaleString()}`;
 
         const waLink = `https://wa.me/5493764364659?text=${encodeURIComponent(message)}`;
         window.open(waLink, '_blank');
