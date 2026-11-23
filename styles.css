@@ -617,16 +617,10 @@ ul { list-style: none; }
     text-align: right;
 }
 
-.summary-price .price-original {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 0.8rem;
-}
-
-.summary-price .price-discount {
+.summary-price .price-display {
     font-weight: 700;
     color: var(--primary);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .btn-add-selection {

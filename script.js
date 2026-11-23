@@ -554,7 +554,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    const calculateListPrice = (price) => Math.round(price * 1.10);
+    const LIST_PRICE_MULTIPLIER = 1.10;
+    const calculateListPrice = (price) => Math.round(price * LIST_PRICE_MULTIPLIER);
 
     const getColorStyle = (variant) => {
         if (variant.colorGradient) {
@@ -594,8 +595,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="offer-title">${combo.title}</h3>
                     <p class="offer-items-list">Incluye: ${itemsList}</p>
                     <div class="offer-prices">
-                        <span class="offer-price-original">$${originalPrice.toLocaleString()}</span>
-                        <span class="offer-price-combo">$${combo.comboPrice.toLocaleString()}</span>
+                        <span class="offer-price-original">$${calculateListPrice(originalPrice).toLocaleString()}</span>
+                        <span class="offer-price-combo">$${calculateListPrice(combo.comboPrice).toLocaleString()}</span>
                         <span class="offer-savings">-${Math.round((savings/originalPrice)*100)}%</span>
                     </div>
                     <button class="btn-view-combo" data-combo-id="${combo.id}">
@@ -793,7 +794,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const variant = itemData.variants.filter(v => v.size === modalState.selectedSize)[modalState.selectedColor];
-        const listPrice = calculateListPrice(itemData.price);
+        const displayPrice = calculateListPrice(itemData.price);
 
         summaryArea.innerHTML = `
             <div class="selection-summary">
@@ -801,8 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <strong>${modalState.selectedItem}</strong> - Talle ${modalState.selectedSize} - ${variant.colorName}
                 </div>
                 <div class="summary-price">
-                    <div class="price-original">Lista (tarjeta/QR): $${listPrice.toLocaleString()}</div>
-                    <div class="price-discount">Efectivo/Transf.: $${itemData.price.toLocaleString()}</div>
+                    <div class="price-display">$${displayPrice.toLocaleString()}</div>
                 </div>
                 <button class="btn-add-selection" id="btn-confirm-add">
                     <i class="fas fa-plus"></i> Agregar
@@ -813,7 +813,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('btn-confirm-add').addEventListener('click', () => {
             cart.push({
                 modelTitle: model.title,
-                item: { name: modalState.selectedItem, price: itemData.price },
+                item: { name: modalState.selectedItem, price: displayPrice },
                 size: modalState.selectedSize,
                 color: variant.colorName
             });
@@ -885,7 +885,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const block = document.createElement('div');
             block.className = 'combo-item-block';
             block.innerHTML = `
-                <h4>${comboItem.itemName} <span style="font-weight: 400; color: #999; font-size: 0.85rem;">(Valor individual: $${comboItem.individualPrice.toLocaleString()})</span></h4>
+                <h4>${comboItem.itemName} <span style="font-weight: 400; color: #999; font-size: 0.85rem;">(Valor individual: $${calculateListPrice(comboItem.individualPrice).toLocaleString()})</span></h4>
                 <div class="selection-section">
                     <div class="selection-label">Talle</div>
                     <div class="size-buttons" data-model-id="${comboItem.modelId}" data-field="size">
@@ -956,7 +956,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const renderComboSummary = () => {
         const combo = combos.find(c => c.id === comboState.comboId);
-        const originalPrice = combo.items.reduce((sum, item) => sum + item.individualPrice, 0);
+        const originalPrice = combo.items.reduce((sum, item) => sum + calculateListPrice(item.individualPrice), 0);
+        const comboDisplayPrice = calculateListPrice(combo.comboPrice);
         const allSelected = combo.items.every(item => {
             const state = comboState.selections[item.modelId];
             return state.selectedSize !== null && state.selectedColor !== null;
@@ -978,11 +979,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${allSelected ? `<div style="margin-bottom: 12px;">${selectionsText}</div>` : '<p style="font-size: 0.9rem; color: #666; margin-bottom: 12px;">Completá la selección de cada prenda</p>'}
                 <div class="combo-summary-prices">
                     <div>
-                        <div style="text-decoration: line-through; color: #999; font-size: 0.9rem;">Antes: $${originalPrice.toLocaleString()}</div>
-                        <div style="font-weight: 800; color: #ff6b6b; font-size: 1.5rem;">Combo: $${combo.comboPrice.toLocaleString()}</div>
+                        <div style="text-decoration: line-through; color: #999; font-size: 0.9rem;">$${originalPrice.toLocaleString()}</div>
+                        <div style="font-weight: 800; color: #ff6b6b; font-size: 1.5rem;">$${comboDisplayPrice.toLocaleString()}</div>
                     </div>
                     <div style="background: #fff3cd; color: #856404; padding: 6px 12px; border-radius: 12px; font-weight: 700;">
-                        Ahorrás $${(originalPrice - combo.comboPrice).toLocaleString()}
+                        Ahorrás $${(originalPrice - comboDisplayPrice).toLocaleString()}
                     </div>
                 </div>
                 <button class="btn-add-combo" id="btn-add-combo" ${!allSelected ? 'disabled' : ''}>
@@ -994,28 +995,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (allSelected) {
             document.getElementById('btn-add-combo').addEventListener('click', () => {
                 const combo = combos.find(c => c.id === comboState.comboId);
-                const cartItems = combo.items.map(item => {
+                const comboDisplayPrice = calculateListPrice(combo.comboPrice);
+                
+                const comboItems = combo.items.map(item => {
                     const model = models.find(m => m.id === item.modelId);
                     const itemData = model.items[item.itemName];
                     const state = comboState.selections[item.modelId];
                     const variant = itemData.variants.filter(v => v.size === state.selectedSize)[state.selectedColor];
                     return {
-                        modelTitle: model.title,
-                        item: { name: item.itemName, price: item.individualPrice },
+                        itemName: item.itemName,
                         size: state.selectedSize,
-                        color: variant.colorName,
-                        isCombo: true,
-                        comboTitle: combo.title
+                        color: variant.colorName
                     };
                 });
 
-                const totalComboPrice = combo.comboPrice;
-                const totalIndividualPrice = combo.items.reduce((sum, item) => sum + item.individualPrice, 0);
-                const ratio = totalComboPrice / totalIndividualPrice;
-
-                cartItems.forEach(cartItem => {
-                    cartItem.item.price = Math.round(cartItem.item.price * ratio);
-                    cart.push(cartItem);
+                cart.push({
+                    modelTitle: combo.title,
+                    comboItems: comboItems,
+                    item: { name: "Combo completo", price: comboDisplayPrice },
+                    isCombo: true,
+                    comboId: combo.id
                 });
 
                 updateCartUI();
@@ -1059,7 +1058,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartSubtotalEl = document.getElementById('cart-subtotal');
     const cartShippingEl = document.getElementById('cart-shipping');
     const cartTotalEl = document.getElementById('cart-total');
-    const cartTotalCardEl = document.getElementById('cart-total-card');
     const shippingMsgEl = document.getElementById('shipping-msg');
     const sendWhatsapp = document.getElementById('send-whatsapp');
 
@@ -1071,7 +1069,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cartSubtotalEl.textContent = '$0';
             cartShippingEl.textContent = '$0';
             cartTotalEl.textContent = '$0';
-            cartTotalCardEl.textContent = '$0';
             shippingMsgEl.innerHTML = '<p><i class="fas fa-truck"></i> Envío: $3.000 | <strong>Gratis</strong> en Posadas y Garupá por compras superiores a $60.000</p>';
             shippingMsgEl.style.background = '#e8f5e9';
             shippingMsgEl.style.color = '#2e7d32';
@@ -1081,29 +1078,43 @@ document.addEventListener('DOMContentLoaded', () => {
         let subtotal = 0;
         cartItemsContainer.innerHTML = cart.map((item, index) => {
             subtotal += item.item.price;
-            const comboBadge = item.isCombo ? `<div class="cart-item-details" style="color: #ff6b6b; font-weight: 600;"><i class="fas fa-gift"></i> ${item.comboTitle}</div>` : '';
-            return `
-                <div class="cart-item ${item.isCombo ? 'combo-item' : ''}">
-                    <div class="cart-item-title">${item.modelTitle}</div>
-                    ${comboBadge}
-                    <div class="cart-item-details"><strong>${item.item.name}</strong></div>
-                    <div class="cart-item-details">Talle: ${item.size} | Color: ${item.color}</div>
-                    <div class="cart-item-details">Precio: $${item.item.price.toLocaleString()}</div>
-                    <button class="cart-item-remove" data-index="${index}">
-                        <i class="fas fa-trash"></i> Eliminar
-                    </button>
-                </div>
-            `;
+            
+            if (item.isCombo) {
+                const itemsDetails = item.comboItems.map(ci => 
+                    `<div class="cart-item-details">• ${ci.itemName}: Talle ${ci.size}, ${ci.color}</div>`
+                ).join('');
+                
+                return `
+                    <div class="cart-item combo-item">
+                        <div class="cart-item-title">🔥 ${item.modelTitle}</div>
+                        ${itemsDetails}
+                        <div class="cart-item-details" style="margin-top: 8px;"><strong>Precio combo: $${item.item.price.toLocaleString()}</strong></div>
+                        <button class="cart-item-remove" data-index="${index}">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </button>
+                    </div>
+                `;
+            } else {
+                return `
+                    <div class="cart-item">
+                        <div class="cart-item-title">${item.modelTitle}</div>
+                        <div class="cart-item-details"><strong>${item.item.name}</strong></div>
+                        <div class="cart-item-details">Talle: ${item.size} | Color: ${item.color}</div>
+                        <div class="cart-item-details">Precio: $${item.item.price.toLocaleString()}</div>
+                        <button class="cart-item-remove" data-index="${index}">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </button>
+                    </div>
+                `;
+            }
         }).join('');
 
         const shippingCost = subtotal >= 60000 ? 0 : 3000;
         const total = subtotal + shippingCost;
-        const totalWithCard = Math.round(total * 1.10);
 
         cartSubtotalEl.textContent = `$${subtotal.toLocaleString()}`;
         cartShippingEl.textContent = shippingCost === 0 ? 'Gratis' : `$${shippingCost.toLocaleString()}`;
         cartTotalEl.textContent = `$${total.toLocaleString()}`;
-        cartTotalCardEl.textContent = `$${totalWithCard.toLocaleString()}`;
         
         if (shippingCost === 0) {
             shippingMsgEl.innerHTML = '<p><i class="fas fa-check-circle"></i> ¡Tenés <strong>Envío Gratis</strong>!</p>';
@@ -1136,27 +1147,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let subtotal = 0;
         let message = '¡Hola! Me interesa consultar disponibilidad de:\n\n';
-        cart.forEach((item, i) => {
+        let counter = 1;
+
+        cart.forEach((item) => {
             subtotal += item.item.price;
+            
             if (item.isCombo) {
-                message += `${i + 1}. 🔥 ${item.comboTitle}\n`;
+                message += `${counter}. 🔥 ${item.modelTitle}\n`;
+                item.comboItems.forEach(ci => {
+                    message += `   • ${ci.itemName}: Talle ${ci.size}, ${ci.color}\n`;
+                });
+                message += `   • Precio combo: $${item.item.price.toLocaleString()}\n\n`;
             } else {
-                message += `${i + 1}. ${item.modelTitle}\n`;
+                message += `${counter}. ${item.modelTitle}\n`;
+                message += `   • ${item.item.name}\n`;
+                message += `   • Talle: ${item.size}\n`;
+                message += `   • Color: ${item.color}\n`;
+                message += `   • Precio: $${item.item.price.toLocaleString()}\n\n`;
             }
-            message += `   • ${item.item.name}\n`;
-            message += `   • Talle: ${item.size}\n`;
-            message += `   • Color: ${item.color}\n`;
-            message += `   • Precio: $${item.item.price.toLocaleString()}\n\n`;
+            counter++;
         });
 
         const shippingCost = subtotal >= 60000 ? 0 : 3000;
         const total = subtotal + shippingCost;
-        const totalWithCard = Math.round(total * 1.10);
 
         message += `💰 Subtotal: $${subtotal.toLocaleString()}\n`;
         message += `🚚 Envío: ${shippingCost === 0 ? 'Gratis' : '$3.000'}\n`;
-        message += `✅ Total (Efectivo/Transferencia): $${total.toLocaleString()}\n`;
-        message += `💳 Total (Tarjeta/Débito/QR): $${totalWithCard.toLocaleString()}`;
+        message += `✅ Total: $${total.toLocaleString()}`;
 
         const waLink = `https://wa.me/5493764364659?text=${encodeURIComponent(message)}`;
         window.open(waLink, '_blank');
